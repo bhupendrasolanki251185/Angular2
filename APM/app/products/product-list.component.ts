@@ -6,7 +6,7 @@ import { IProduct } from './product';
 import { ProductHttpService } from './product.http.service';
 import { Observable } from 'rxjs/Observable';
 @Component({
-    selector : "pm-product-list",
+    // selector : "pm-product-list", 
     moduleId : module.id,
     templateUrl : "product-list.component.html",
     styleUrls : ['product-list.component.css']

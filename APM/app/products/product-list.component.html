@@ -43,15 +43,16 @@
                                  *ngIf='showImage'
                                  />
                          </td>
-                        <td>{{product.productName}}</td>
+                        <td><a [routerLink]="['/product',product.productId]">
+                            {{product.productName}}</a></td>
                         <td>{{ product.productCode | lowercase }}</td>
                         <td>{{ product.releaseDate }}</td>
                         <td>{{ product.price | currency:'Inr':true:'1.2-2' }}</td>
                         <!--<td>{{ product.starRating }}</td>-->
                         <td>
                             <star-rating 
-                            [rating]='product.starRating'
-                            (onRatingClick) = 'onNotify($event)'></star-rating>
+                                [rating]='product.starRating'
+                                (onRatingClick) = 'onNotify($event)'></star-rating>
                         </td>
                     </tr>   
                 </tbody>
