@@ -23,11 +23,11 @@ var ProductHttpService = (function () {
     ProductHttpService.prototype.getProduct = function () {
         return this._http.get(this._prductUrl)
             .map(function (respone) {
-            console.log("respone", respone);
+            console.log("ProductHttpService respone", respone);
             return respone.json();
         })
             .do(function (data) {
-            console.log("data==>", JSON.stringify(data));
+            console.log("ProductHttpService data==>", JSON.stringify(data));
         })
             .catch(this.errorHandler);
     };

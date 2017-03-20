@@ -47,13 +47,14 @@ export class ProductListComponent implements OnInit{
          // Injecting HTTP service 
        this._products.getProduct()
                       .subscribe((productsDetails) => {
-                                    this.products = productsDetails
+                                    this.products = productsDetails;
+                                    console.log("products", this.products)
                                 }
                                 ,(error) => {
                                     this.errorMessage = <any>error
                                 });
 
-        console.log("products", this.products)
+        
     }
 
     toggleImage():void{

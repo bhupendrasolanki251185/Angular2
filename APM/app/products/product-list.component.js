@@ -45,10 +45,10 @@ var ProductListComponent = (function () {
         this._products.getProduct()
             .subscribe(function (productsDetails) {
             _this.products = productsDetails;
+            console.log("products", _this.products);
         }, function (error) {
             _this.errorMessage = error;
         });
-        console.log("products", this.products);
     };
     ProductListComponent.prototype.toggleImage = function () {
         this.showImage = !this.showImage;

@@ -19,11 +19,11 @@ export class ProductHttpService{
         
         return this._http.get(this._prductUrl)
                           .map((respone:Response) => {
-                               console.log("respone", respone)
+                               console.log("ProductHttpService respone", respone)
                                return <IProduct[]>respone.json()
                             })
                           .do((data) =>  {
-                              console.log("data==>",JSON.stringify(data))
+                              console.log("ProductHttpService data==>",JSON.stringify(data))
                             })
                           .catch(this.errorHandler);
     }
