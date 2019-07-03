@@ -1,0 +1,31 @@
+.text_decor a{
+  font-size:18px;
+	color:black;
+}
+
+i{
+ vertical-align: middle !important;
+  }
+
+ .nav-padding{
+   margin-left: auto;
+  vertical-align: middle !important;
+} 
+
+.header{
+  background-color: #fff;
+  box-shadow: 0 0px 0px 0 rgba(0,0,0,0), 0 0px 0 rgba(0,0,0,0) !important;
+
+}
+.navbar-brand {
+  font-size:22px;
+  vertical-align: middle !important;
+}
+
+.dashboard{
+  height: 63px;
+  width: 210px;
+  background: #E75F4A;
+  color: #fff;
+}
+

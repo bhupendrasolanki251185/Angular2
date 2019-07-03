@@ -1,0 +1,23 @@
+<div class="" id="bg">
+  <img src="/assets/Layer1.png" id="bgImg" alt="">
+  <div class="centered">
+    <div class="im1"><img src="/assets/Layer2.png"></div>
+    <form name="form" #f="ngForm" novalidate>
+      <div class="form-group">
+        <input type="textbox" class="form-control txtwidth userIcon" name="name" [(ngModel)]="model.name" placeholder="username"
+          required />
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control txtwidth passIcon" placeholder="password" name="password" required />
+      </div>
+      <div class="form-group">
+        <md-select class="drop_box form-control" name="role" [(ngModel)]="model.role" placeholder="Role">
+          <md-option *ngFor="let role of roles" [value]="role.role" required>{{role.role}}</md-option>
+        </md-select>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary clrNlbl" (click)="login()">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+
+.form-label {
+    color: black;
+    font-size: 14px;
+}
+.drop_box {
+    width: 63%;
+}
+
+#Layer2 
+{ 
+	 left: 737px; 
+	 top: 185px; 
+	 position: absolute; 
+	 width: 444px;
+	 height: 83px;
+	 z-index:10;
+} 
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#bg #bgImg {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  filter: brightness(50%);
+}
+
+.centered {
+    z-index: 10;
+    width: 500px;
+    height:500px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.txtwidth {
+    width:63%;
+    height: 47px;
+}
+
+.userIcon {
+    background-image:url("assets/Forma1.png");   
+background-position:right;   
+background-repeat:no-repeat; 
+background-size: 8%;  
+padding-left:15px;
+}
+
+.passIcon {
+    background-image:url("assets/Shape1.png");   
+background-position:right;   
+background-repeat:no-repeat; 
+background-size: 8%;  
+padding-left:15px;
+background: #fff;
+border-radius: 4px;
+width: 60%;
+}
+
+.clrNlbl {
+    background-color: white;
+    -webkit-text-fill-color: black;
+	margin-left: 105px;
+	height: 45px;
+}
+
+.form-group {
+    margin-bottom: 35px;
+    margin-left: 70px;
+    width: 100%;
+}
+
+.im1 {
+        margin-bottom: 33px;
+        /* background-image: url("assets/Layer2.png"); */
+        background-repeat: no-repeat;
+} 

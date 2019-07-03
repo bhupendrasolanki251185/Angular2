@@ -1,0 +1,41 @@
+<div class="report_container" *ngIf="dialogView==='Report'">
+    <div class="row report_header">
+        <div class="col-sm-6 ">
+            <div class="title">View Report</div>
+        </div>
+        <div class="col-sm-4 "></div>
+        <div class="col-sm-2">
+            <div class="close"><i class="material-icons" (click)="onClose()">clear</i></div>
+        </div>
+    </div>
+    <div class="row alignment">
+        <div class="col-sm-11 image">
+            <img src="http://www.innovativelab.com.sg/wp-content/uploads/2016/03/Report-2-600x900.png" style="height: 532px;" alt="">
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="dialogView!=='Report' && doctorDetails">
+    <div class="row header">
+        <div class="col-sm-6 ">
+            <div class="title">Authorize Report</div>
+        </div>
+        <div class="col-sm-4 "></div>
+        <div class="col-sm-2">
+            <div class="close"><i class="material-icons" (click)="onClose()">clear</i></div>
+        </div>
+    </div>
+
+    <div class="row alignment">
+        <div class="col-sm-11">
+            <label for="role " class="form-label">Doctor</label>
+            <select class="search_box form-control">
+            <option *ngFor="let doc of doctorDetails" [value]="doc.firstName">{{doc.firstName}}</option>
+        </select>
+        </div>
+
+        <div class="col-sm-11 auth">
+            <div class="col-sm-7"></div>
+            <div class="col-sm-4"><a md-button class="btn_create bottom" (click)="onAuthorize()">Authorize</a></div>
+        </div>
+    </div>
+</div>

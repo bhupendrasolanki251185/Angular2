@@ -1,0 +1,57 @@
+<div class="tableHeader" *ngIf="rows">
+  <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [rowHeight]="'auto'" [limit]="10">
+    [rowHeight]="'auto'">
+    <ngx-datatable-column name="Patient" *ngIf="user.role==='Doctor'">
+      <ng-template let-column="column" ngx-datatable-header-template>
+        <div class="db_sort"><b>{{column.name}}</b></div>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class='col col-name'>{{ row['owner'].substring(row['owner'].indexOf("#") + 1, row['owner'].length)}}</div>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Test">
+      <ng-template let-column="column" ngx-datatable-header-template>
+        <div class="db_sort"><b>{{column.name}}</b></div>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class='col col-name'>{{row.name}}</div>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Date">
+      <ng-template class="tHeader" let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+       <div class="db_sort"><b>{{column.name}}</b></div>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="col">{{row.date}} </div>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Time">
+      <ng-template class="tHeader" let-column="column" ngx-datatable-header-template>
+       <div class="db_sort"><b>{{column.name}}</b></div>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="forest">{{row.time}}</div>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Doctor">
+      <ng-template class="tHeader" let-column="column" ngx-datatable-header-template>
+        <div class="db_sort"><b>{{column.name}}</b></div>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="col">{{ row['doctor'].substring(row['doctor'].indexOf("#") + 1, row['doctor'].length)}}</div>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Action">
+      <ng-template class="tHeader" let-column="column" ngx-datatable-header-template>
+        <div class="db_sort"><b>{{column.name}}</b></div>
+      </ng-template>
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="col actions">
+          <i class="material-icons" (click)="openReortDialog(row,'Report')">visibility</i>         
+          <i class="material-icons" (click)="openDialog(row)" *ngIf="user.role==='Patient'">accessibility</i>
+
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>
